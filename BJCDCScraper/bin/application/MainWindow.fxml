@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane prefHeight="505.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindow">
+   <bottom>
+      <Pane prefHeight="26.0" prefWidth="596.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnPlus" layoutX="546.0" mnemonicParsing="false" onAction="#zoomIn" prefHeight="25.0" prefWidth="25.0" text="+" />
+            <TextField fx:id="txtURL" layoutX="113.0" onKeyPressed="#browse" prefHeight="25.0" prefWidth="432.0" />
+            <Button fx:id="btnRefresh" layoutX="57.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="57.0" text="刷新" />
+            <Button fx:id="btnMinus" layoutX="571.0" mnemonicParsing="false" onAction="#zoomOut" prefHeight="25.0" prefWidth="25.0" text="-" />
+            <Button fx:id="btnExecute" mnemonicParsing="false" onAction="#execute" prefHeight="25.0" prefWidth="57.0" text="開始" />
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <WebView fx:id="webView" prefHeight="398.0" prefWidth="596.0" />
+            <Label layoutX="11.0" layoutY="410.0" text="機器到達此章節後會停運行的：" />
+            <TextField fx:id="txtFinalArticle" layoutX="179.0" layoutY="406.0" prefHeight="25.0" prefWidth="404.0" />
+            <TextField fx:id="txtDirectory" layoutX="132.0" layoutY="440.0" prefHeight="25.0" prefWidth="452.0" />
+            <Label layoutX="11.0" layoutY="444.0" text="電腦文件夾路徑全稱：" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
